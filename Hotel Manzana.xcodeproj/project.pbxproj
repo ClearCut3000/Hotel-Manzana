@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		3605E0EB27491C3200DA012E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E0EA27491C3200DA012E /* AppDelegate.swift */; };
 		3605E0ED27491C3200DA012E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E0EC27491C3200DA012E /* SceneDelegate.swift */; };
-		3605E0EF27491C3200DA012E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E0EE27491C3200DA012E /* ViewController.swift */; };
 		3605E0F227491C3200DA012E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3605E0F027491C3200DA012E /* Main.storyboard */; };
 		3605E0F427491C3D00DA012E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3605E0F327491C3D00DA012E /* Assets.xcassets */; };
 		3605E0F727491C3D00DA012E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3605E0F527491C3D00DA012E /* LaunchScreen.storyboard */; };
+		3605E100274A794800DA012E /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E0FF274A794800DA012E /* Registration.swift */; };
+		3605E102274A7A1E00DA012E /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E101274A7A1E00DA012E /* RoomType.swift */; };
+		3605E107274A7F8400DA012E /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E106274A7F8400DA012E /* AddRegistrationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3605E0E727491C3200DA012E /* Hotel Manzana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hotel Manzana.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3605E0EA27491C3200DA012E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3605E0EC27491C3200DA012E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3605E0EE27491C3200DA012E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3605E0F127491C3200DA012E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3605E0F327491C3D00DA012E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3605E0F627491C3D00DA012E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3605E0F827491C3D00DA012E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3605E0FF274A794800DA012E /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		3605E101274A7A1E00DA012E /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
+		3605E106274A7F8400DA012E /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		3605E0E927491C3200DA012E /* Hotel Manzana */ = {
 			isa = PBXGroup;
 			children = (
-				3605E0EA27491C3200DA012E /* AppDelegate.swift */,
-				3605E0EC27491C3200DA012E /* SceneDelegate.swift */,
-				3605E0EE27491C3200DA012E /* ViewController.swift */,
-				3605E0F027491C3200DA012E /* Main.storyboard */,
-				3605E0F327491C3D00DA012E /* Assets.xcassets */,
-				3605E0F527491C3D00DA012E /* LaunchScreen.storyboard */,
-				3605E0F827491C3D00DA012E /* Info.plist */,
+				3605E103274A7E8E00DA012E /* View Controller */,
+				3605E0FE274A791100DA012E /* Model */,
+				3605E105274A7EEA00DA012E /* App */,
+				3605E104274A7EB400DA012E /* Storyboards */,
 			);
 			path = "Hotel Manzana";
+			sourceTree = "<group>";
+		};
+		3605E0FE274A791100DA012E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3605E0FF274A794800DA012E /* Registration.swift */,
+				3605E101274A7A1E00DA012E /* RoomType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3605E103274A7E8E00DA012E /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3605E106274A7F8400DA012E /* AddRegistrationTableViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		3605E104274A7EB400DA012E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3605E0F027491C3200DA012E /* Main.storyboard */,
+				3605E0F527491C3D00DA012E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3605E105274A7EEA00DA012E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3605E0EA27491C3200DA012E /* AppDelegate.swift */,
+				3605E0EC27491C3200DA012E /* SceneDelegate.swift */,
+				3605E0F327491C3D00DA012E /* Assets.xcassets */,
+				3605E0F827491C3D00DA012E /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3605E0EF27491C3200DA012E /* ViewController.swift in Sources */,
+				3605E102274A7A1E00DA012E /* RoomType.swift in Sources */,
+				3605E107274A7F8400DA012E /* AddRegistrationTableViewController.swift in Sources */,
 				3605E0EB27491C3200DA012E /* AppDelegate.swift in Sources */,
+				3605E100274A794800DA012E /* Registration.swift in Sources */,
 				3605E0ED27491C3200DA012E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CJ7JF497NG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hotel Manzana/Info.plist";
+				INFOPLIST_FILE = "Hotel Manzana/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +359,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CJ7JF497NG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Hotel Manzana/Info.plist";
+				INFOPLIST_FILE = "Hotel Manzana/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
