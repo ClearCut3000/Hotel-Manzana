@@ -15,6 +15,8 @@
 		3605E100274A794800DA012E /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E0FF274A794800DA012E /* Registration.swift */; };
 		3605E102274A7A1E00DA012E /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E101274A7A1E00DA012E /* RoomType.swift */; };
 		3605E107274A7F8400DA012E /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E106274A7F8400DA012E /* AddRegistrationTableViewController.swift */; };
+		3605E109274BCAB100DA012E /* SelectRoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E108274BCAB100DA012E /* SelectRoomTypeTableViewController.swift */; };
+		3605E10C274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E10B274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		3605E0FF274A794800DA012E /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		3605E101274A7A1E00DA012E /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
 		3605E106274A7F8400DA012E /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
+		3605E108274BCAB100DA012E /* SelectRoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewController.swift; sourceTree = "<group>"; };
+		3605E10B274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		3605E0E927491C3200DA012E /* Hotel Manzana */ = {
 			isa = PBXGroup;
 			children = (
+				3605E10A274C009300DA012E /* Protocols */,
 				3605E103274A7E8E00DA012E /* View Controller */,
 				3605E0FE274A791100DA012E /* Model */,
 				3605E105274A7EEA00DA012E /* App */,
@@ -81,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				3605E106274A7F8400DA012E /* AddRegistrationTableViewController.swift */,
+				3605E108274BCAB100DA012E /* SelectRoomTypeTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -103,6 +109,14 @@
 				3605E0F827491C3D00DA012E /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		3605E10A274C009300DA012E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3605E10B274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +190,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3605E109274BCAB100DA012E /* SelectRoomTypeTableViewController.swift in Sources */,
+				3605E10C274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift in Sources */,
 				3605E102274A7A1E00DA012E /* RoomType.swift in Sources */,
 				3605E107274A7F8400DA012E /* AddRegistrationTableViewController.swift in Sources */,
 				3605E0EB27491C3200DA012E /* AppDelegate.swift in Sources */,

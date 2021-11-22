@@ -13,10 +13,21 @@ class AddRegistrationTableViewController: UITableViewController {
   @IBOutlet var firstNameTextField: UITextField!
   @IBOutlet var lastNameTextField: UITextField!
   @IBOutlet var emailAdressTextField: UITextField!
+
   @IBOutlet var checkInDateLabel: UILabel!
   @IBOutlet var checkInDatePicker: UIDatePicker!
   @IBOutlet var checkOutDateLabel: UILabel!
   @IBOutlet var checkOutDatePicker: UIDatePicker!
+
+  @IBOutlet var numberOfAdultsLabel: UILabel!
+  @IBOutlet var numberOfAdultsStepper: UIStepper!
+  @IBOutlet var numberOfChildrenLabel: UILabel!
+  @IBOutlet var numberOfChildrenStepper: UIStepper!
+
+  @IBOutlet var wifiSwitch: UISwitch!
+  @IBOutlet var roomTypeLabel: UILabel!
+
+  
 
   // MARK: - Properties
   let checkInDateLabelIndexPath = IndexPath(row: 0, section: 1)
@@ -34,6 +45,9 @@ class AddRegistrationTableViewController: UITableViewController {
     }
   }
 
+  var roomType: RoomType?
+
+
   //MARK: - UIViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -41,6 +55,17 @@ class AddRegistrationTableViewController: UITableViewController {
     checkInDatePicker.minimumDate = midnightToday
     checkInDatePicker.date = midnightToday
     updateDateViews()
+    updateNumberOfGuests()
+    updateRoomType()
+  }
+
+//MARK: - Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    guard segue.identifier == "SelectRoomType" else { return }
+    let destination = segue.destination as! SelectRoomTypeTableViewController
+    destination.delegate = self
+    destination.roomType = roomType
+
   }
 
   //MARK: - UI Methods
@@ -51,6 +76,21 @@ class AddRegistrationTableViewController: UITableViewController {
     dateFormatter.locale = Locale.current
     checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
     checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
+  }
+
+  func updateNumberOfGuests(){
+    let numberOfAdults = Int(numberOfAdultsStepper.value)
+    let numberOfChildren = Int(numberOfChildrenStepper.value)
+    numberOfAdultsLabel.text = "\(numberOfAdults)"
+    numberOfChildrenLabel.text = "\(numberOfChildren)"
+  }
+
+  func updateRoomType(){
+    if let roomType = roomType {
+      roomTypeLabel.text = roomType.name
+    } else {
+      roomTypeLabel.text = "Not Set"
+    }
   }
 
   //MARK: - Actions
@@ -65,17 +105,23 @@ class AddRegistrationTableViewController: UITableViewController {
     let email = emailAdressTextField.text ?? ""
     let checkInDate = checkInDatePicker.date
     let checkOutDate = checkOutDatePicker.date
-
+    let numberOfAdults = Int(numberOfAdultsStepper.value)
+    let numberOfChildren = Int(numberOfChildrenStepper.value)
+    let wifi = wifiSwitch.isOn
     let registration = Registration(
       firstName: firstName,
       lastName: lastName,
       emailAdress: email,
       checkInDate: checkInDate,
       checkOutDate: checkOutDate,
-      numberOfAdults: 0,
-      numberOfChildren: 0,
-      roomType: RoomType(id: 0, name: "", shortName: "", price: 0),
-      wifi: false)
+      numberOfAdults: numberOfAdults,
+      numberOfChildren: numberOfChildren,
+      roomType: roomType,
+      wifi: wifi
+    )
+  }
+  @IBAction func stepperValueChanged(_ sender: UIStepper){
+    updateNumberOfGuests()
   }
 }
 
@@ -110,4 +156,14 @@ extension AddRegistrationTableViewController/*: UITableViewDelegate */{
     tableView.beginUpdates()
     tableView.endUpdates()
   }
+}
+
+//MARK: - SelectRoomTypeTableViewControllerProtocol
+extension AddRegistrationTableViewController: SelectRoomTypeTableViewControllerProtocol{
+  func didSelect(roomType: RoomType) {
+    self.roomType = roomType
+    updateRoomType()
+  }
+
+
 }
