@@ -153,8 +153,7 @@ extension AddRegistrationTableViewController/*: UITableViewDelegate */{
     default:
       return
     }
-    tableView.beginUpdates()
-    tableView.endUpdates()
+    tableView.reloadData()
   }
 }
 
