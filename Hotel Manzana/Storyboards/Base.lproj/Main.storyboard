@@ -338,7 +338,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Registration" id="O3V-3W-IxJ">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="3g9-PN-tCT">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="3g9-PN-tCT">
                             <connections>
                                 <action selector="doneBarButtonTapped:" destination="Bre-C6-2O8" id="gbg-QS-nqy"/>
                             </connections>
@@ -349,6 +349,7 @@
                         <outlet property="checkInDatePicker" destination="dFV-JU-1KY" id="hEm-qh-RAQ"/>
                         <outlet property="checkOutDateLabel" destination="rDf-cq-vzi" id="IOw-Ad-9ML"/>
                         <outlet property="checkOutDatePicker" destination="TeD-Ne-pjI" id="DCU-Fo-FRw"/>
+                        <outlet property="doneBarButton" destination="3g9-PN-tCT" id="KOP-MM-vaO"/>
                         <outlet property="emailAdressTextField" destination="ktD-lN-l7b" id="h1J-lm-zLI"/>
                         <outlet property="firstNameTextField" destination="O48-Qj-PEW" id="Vg4-mi-t9A"/>
                         <outlet property="lastNameTextField" destination="Z9c-05-szn" id="oFs-Ag-cbL"/>

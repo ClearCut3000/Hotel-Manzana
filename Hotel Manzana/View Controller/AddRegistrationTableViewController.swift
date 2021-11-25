@@ -10,6 +10,8 @@ import UIKit
 class AddRegistrationTableViewController: UITableViewController {
 
   // MARK: - Outlets
+  @IBOutlet weak var doneBarButton: UIBarButtonItem!
+
   @IBOutlet var firstNameTextField: UITextField!
   @IBOutlet var lastNameTextField: UITextField!
   @IBOutlet var emailAdressTextField: UITextField!
@@ -51,6 +53,7 @@ class AddRegistrationTableViewController: UITableViewController {
   //MARK: - UIViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    textFieldWatcher()
     let midnightToday = Calendar.current.startOfDay(for: Date())
     checkInDatePicker.minimumDate = midnightToday
     checkInDatePicker.date = midnightToday
@@ -91,6 +94,31 @@ class AddRegistrationTableViewController: UITableViewController {
     } else {
       roomTypeLabel.text = "Not Set"
     }
+  }
+
+  private func isEmailValid() -> Bool{
+    guard let text = emailAdressTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return false }
+    guard let emailDetection = try? NSDataDetector (types: NSTextCheckingResult.CheckingType.link.rawValue) else { return false }
+    let range = NSMakeRange(0, NSString(string: text).length)
+    let matches = emailDetection.matches(in: text, options: [], range: range)
+    if matches.count == 1, matches.first?.url?.absoluteString.contains("mailto:") == true {
+      return true
+    }
+    return false
+  }
+
+  private func textFieldWatcher(){
+    firstNameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+    lastNameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+    emailAdressTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+  }
+
+  @objc func textFieldDidChange(_ textField: UITextField){
+    if firstNameTextField.text!.isEmpty || lastNameTextField.text!.isEmpty || emailAdressTextField.text!.isEmpty || !isEmailValid() {
+        doneBarButton.isEnabled = false
+      } else {
+        doneBarButton.isEnabled = true
+      }
   }
 
   //MARK: - Actions
@@ -163,6 +191,5 @@ extension AddRegistrationTableViewController: SelectRoomTypeTableViewControllerP
     self.roomType = roomType
     updateRoomType()
   }
-
-
 }
+
