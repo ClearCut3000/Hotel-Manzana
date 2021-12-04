@@ -22,7 +22,7 @@ extension SelectRoomTypeTableViewController/*: UITableViewDataSource*/ {
     let roomType = RoomType.all[indexPath.row]
     cell.accessoryType = roomType == self.roomType ? .checkmark : .none
     cell.textLabel?.text = roomType.name
-    cell.detailTextLabel?.text = "$ \(roomType.price)"
+    cell.detailTextLabel?.text = "$ \(String(describing: roomType.price))"
     return cell
   }
 }

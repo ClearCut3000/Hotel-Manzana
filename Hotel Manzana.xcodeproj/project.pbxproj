@@ -17,6 +17,10 @@
 		3605E107274A7F8400DA012E /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E106274A7F8400DA012E /* AddRegistrationTableViewController.swift */; };
 		3605E109274BCAB100DA012E /* SelectRoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E108274BCAB100DA012E /* SelectRoomTypeTableViewController.swift */; };
 		3605E10C274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3605E10B274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift */; };
+		36B60001275950E3007D7C6C /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B60000275950E3007D7C6C /* CellManager.swift */; };
+		36B60004275A4088007D7C6C /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B60003275A4088007D7C6C /* GuestCell.swift */; };
+		36B60006275BB270007D7C6C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B60005275BB26F007D7C6C /* DataManager.swift */; };
+		36B6FFFE27594EDC007D7C6C /* GuestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6FFFD27594EDC007D7C6C /* GuestsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		3605E106274A7F8400DA012E /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
 		3605E108274BCAB100DA012E /* SelectRoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewController.swift; sourceTree = "<group>"; };
 		3605E10B274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewControllerProtocol.swift; sourceTree = "<group>"; };
+		36B60000275950E3007D7C6C /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
+		36B60003275A4088007D7C6C /* GuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCell.swift; sourceTree = "<group>"; };
+		36B60005275BB26F007D7C6C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		36B6FFFD27594EDC007D7C6C /* GuestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,8 @@
 		3605E0E927491C3200DA012E /* Hotel Manzana */ = {
 			isa = PBXGroup;
 			children = (
+				36B60002275A404D007D7C6C /* Cells */,
+				36B6FFFF275950C8007D7C6C /* Manager */,
 				3605E10A274C009300DA012E /* Protocols */,
 				3605E103274A7E8E00DA012E /* View Controller */,
 				3605E0FE274A791100DA012E /* Model */,
@@ -87,6 +97,7 @@
 			children = (
 				3605E106274A7F8400DA012E /* AddRegistrationTableViewController.swift */,
 				3605E108274BCAB100DA012E /* SelectRoomTypeTableViewController.swift */,
+				36B6FFFD27594EDC007D7C6C /* GuestsTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -117,6 +128,23 @@
 				3605E10B274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		36B60002275A404D007D7C6C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				36B60003275A4088007D7C6C /* GuestCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		36B6FFFF275950C8007D7C6C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				36B60000275950E3007D7C6C /* CellManager.swift */,
+				36B60005275BB26F007D7C6C /* DataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,11 +218,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B60004275A4088007D7C6C /* GuestCell.swift in Sources */,
 				3605E109274BCAB100DA012E /* SelectRoomTypeTableViewController.swift in Sources */,
+				36B60001275950E3007D7C6C /* CellManager.swift in Sources */,
 				3605E10C274C00D900DA012E /* SelectRoomTypeTableViewControllerProtocol.swift in Sources */,
 				3605E102274A7A1E00DA012E /* RoomType.swift in Sources */,
 				3605E107274A7F8400DA012E /* AddRegistrationTableViewController.swift in Sources */,
+				36B6FFFE27594EDC007D7C6C /* GuestsTableViewController.swift in Sources */,
 				3605E0EB27491C3200DA012E /* AppDelegate.swift in Sources */,
+				36B60006275BB270007D7C6C /* DataManager.swift in Sources */,
 				3605E100274A794800DA012E /* Registration.swift in Sources */,
 				3605E0ED27491C3200DA012E /* SceneDelegate.swift in Sources */,
 			);
