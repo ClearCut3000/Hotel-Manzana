@@ -79,7 +79,6 @@ class AddRegistrationTableViewController: UITableViewController {
   }
 
   //MARK: - UI Methods
-
   private func updateUI(){
     firstNameTextField.text = guest.firstName
     lastNameTextField.text = guest.lastName
@@ -162,7 +161,6 @@ class AddRegistrationTableViewController: UITableViewController {
   }
 
   //MARK: - Actions
-
   @IBAction func datePickerValueChahged(_ sender: UIDatePicker){
     updateDateViews()
   }

@@ -20,6 +20,11 @@
 		36B60001275950E3007D7C6C /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B60000275950E3007D7C6C /* CellManager.swift */; };
 		36B60004275A4088007D7C6C /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B60003275A4088007D7C6C /* GuestCell.swift */; };
 		36B60006275BB270007D7C6C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B60005275BB26F007D7C6C /* DataManager.swift */; };
+		36B6000D275BBEEC007D7C6C /* scr002.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B60008275BBEEC007D7C6C /* scr002.png */; };
+		36B6000E275BBEEC007D7C6C /* scr003.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B60009275BBEEC007D7C6C /* scr003.png */; };
+		36B6000F275BBEEC007D7C6C /* scr001.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B6000A275BBEEC007D7C6C /* scr001.png */; };
+		36B60010275BBEEC007D7C6C /* scr004.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B6000B275BBEEC007D7C6C /* scr004.png */; };
+		36B60011275BBEEC007D7C6C /* scr005.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B6000C275BBEEC007D7C6C /* scr005.png */; };
 		36B6FFFE27594EDC007D7C6C /* GuestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6FFFD27594EDC007D7C6C /* GuestsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +44,11 @@
 		36B60000275950E3007D7C6C /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
 		36B60003275A4088007D7C6C /* GuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCell.swift; sourceTree = "<group>"; };
 		36B60005275BB26F007D7C6C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		36B60008275BBEEC007D7C6C /* scr002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scr002.png; sourceTree = "<group>"; };
+		36B60009275BBEEC007D7C6C /* scr003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scr003.png; sourceTree = "<group>"; };
+		36B6000A275BBEEC007D7C6C /* scr001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scr001.png; sourceTree = "<group>"; };
+		36B6000B275BBEEC007D7C6C /* scr004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scr004.png; sourceTree = "<group>"; };
+		36B6000C275BBEEC007D7C6C /* scr005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scr005.png; sourceTree = "<group>"; };
 		36B6FFFD27594EDC007D7C6C /* GuestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +82,7 @@
 		3605E0E927491C3200DA012E /* Hotel Manzana */ = {
 			isa = PBXGroup;
 			children = (
+				36B60007275BBEEC007D7C6C /* Screenshots */,
 				36B60002275A404D007D7C6C /* Cells */,
 				36B6FFFF275950C8007D7C6C /* Manager */,
 				3605E10A274C009300DA012E /* Protocols */,
@@ -137,6 +148,19 @@
 			);
 			path = Cells;
 			sourceTree = "<group>";
+		};
+		36B60007275BBEEC007D7C6C /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				36B60008275BBEEC007D7C6C /* scr002.png */,
+				36B60009275BBEEC007D7C6C /* scr003.png */,
+				36B6000A275BBEEC007D7C6C /* scr001.png */,
+				36B6000B275BBEEC007D7C6C /* scr004.png */,
+				36B6000C275BBEEC007D7C6C /* scr005.png */,
+			);
+			name = Screenshots;
+			path = "Hotel Manzana/Screenshots";
+			sourceTree = SOURCE_ROOT;
 		};
 		36B6FFFF275950C8007D7C6C /* Manager */ = {
 			isa = PBXGroup;
@@ -205,9 +229,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B6000F275BBEEC007D7C6C /* scr001.png in Resources */,
 				3605E0F727491C3D00DA012E /* LaunchScreen.storyboard in Resources */,
+				36B60011275BBEEC007D7C6C /* scr005.png in Resources */,
+				36B6000E275BBEEC007D7C6C /* scr003.png in Resources */,
+				36B60010275BBEEC007D7C6C /* scr004.png in Resources */,
 				3605E0F427491C3D00DA012E /* Assets.xcassets in Resources */,
 				3605E0F227491C3200DA012E /* Main.storyboard in Resources */,
+				36B6000D275BBEEC007D7C6C /* scr002.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

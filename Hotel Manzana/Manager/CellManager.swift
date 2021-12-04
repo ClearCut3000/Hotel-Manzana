@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+/// Manages custom cell of GuestsTableViewController
 class CellManager{
   func configure(_ cell: GuestCell, witn guest: Registration){
     cell.firstNameLabel.text = guest.firstName

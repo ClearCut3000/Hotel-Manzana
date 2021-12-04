@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+/// Decoda and encode data from guests: [Registration]!
 class DataManager {
   var archiveURL: URL? {
     guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
