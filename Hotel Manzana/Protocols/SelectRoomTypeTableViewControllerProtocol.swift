@@ -7,6 +7,6 @@
 
 
 /// Pass data of chosen roomType between SelectRoomTypeTableViewControllerProtocol  and AddRegistrationTableViewController
-protocol SelectRoomTypeTableViewControllerProtocol {
+protocol SelectRoomTypeTableViewControllerProtocol: AnyObject {
   func didSelect(roomType: RoomType)
 }

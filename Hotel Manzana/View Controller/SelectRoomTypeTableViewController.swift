@@ -8,7 +8,7 @@
 import UIKit
 
 class SelectRoomTypeTableViewController: UITableViewController {
-  var delegate: SelectRoomTypeTableViewControllerProtocol?
+  weak var delegate: SelectRoomTypeTableViewControllerProtocol?
   var roomType: RoomType?
 }
 
